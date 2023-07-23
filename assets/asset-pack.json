@@ -1,0 +1,36 @@
+{
+  "section1": {
+    "files": [
+      {
+        "url": "assets/enviroment/Mountain-Dusk.png",
+        "type": "image",
+        "key": "back"
+      },
+      {
+        "url": "assets/enviroment/Level1.png",
+        "type": "image",
+        "key": "front"
+      },
+      {
+        "url": "tiled/maps/Level1.json",
+        "type": "tilemapTiledJSON",
+        "key": "map"
+      },
+      {
+        "url": "assets/enviroment/HUD.png",
+        "type": "image",
+        "key": "hud"
+      },
+      {
+        "url": "tiled/tilesets/Tiles.png",
+        "type": "image",
+        "key": "Tiles"
+      },
+      {
+        "url": "assets/enviroment/collision.png",
+        "type": "image",
+        "key": "collisionTiles"
+      }
+    ]
+  }
+}

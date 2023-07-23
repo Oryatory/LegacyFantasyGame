@@ -1,0 +1,40 @@
+{
+  "frames": [
+    {
+      "filename": "player/player-idle-1",
+      "frame": { "x": 0, "y": 0, "w": 64, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-idle-2",
+      "frame": { "x": 64, "y": 0, "w": 64, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-idle-3",
+      "frame": { "x": 128, "y": 0, "w": 64, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-idle-4",
+      "frame": { "x": 192, "y": 0, "w": 64, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    }
+  ]
+}

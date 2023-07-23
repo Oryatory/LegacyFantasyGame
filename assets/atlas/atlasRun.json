@@ -1,0 +1,76 @@
+{
+  "frames": [
+    {
+      "filename": "player/player-run-1",
+      "frame": { "x": 0, "y": 0, "w": 80, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-run-2",
+      "frame": { "x": 80, "y": 0, "w": 80, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-run-3",
+      "frame": { "x": 160, "y": 0, "w": 80, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-run-4",
+      "frame": { "x": 220, "y": 0, "w": 80, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-run-5",
+      "frame": { "x": 220, "y": 0, "w": 80, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-run-6",
+      "frame": { "x": 220, "y": 0, "w": 80, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-run-7",
+      "frame": { "x": 220, "y": 0, "w": 80, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    {
+      "filename": "player/player-run-8",
+      "frame": { "x": 220, "y": 0, "w": 80, "h": 80 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 80, "h": 80 },
+      "sourceSize": { "w": 21, "h": 21 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    }
+  ]
+}
