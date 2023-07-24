@@ -28,11 +28,14 @@ window.addEventListener("load", () => {
   });
 
   game.scene.add("Boot", Boot, true);
+  game.scene.add("Preloader", Preloader);
   game.scene.add("Level", Level);
 });
 
 class Boot extends Phaser.Scene {
   preload() {
+    this.scene.launch("Preloader");
+
     this.load.spritesheet("player/idle", "assets/sprites/Idle-Sheet.png", {
       frameWidth: 64,
       frameHeight: 64,
@@ -74,6 +77,9 @@ class Boot extends Phaser.Scene {
   }
 
   create() {
-    this.scene.start("Level");
+    this.time.delayedCall(2000, () => {
+      this.scene.stop("Preloader");
+      this.scene.start("Level");
+    });
   }
 }

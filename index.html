@@ -4,16 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="lib/phaser.js"></script>
-
-    <script src="js/script-nodes-basic-js/ScriptNode.js"></script>
-    <script src="js/script-nodes/FixedToCameraScript.js"></script>
-    <script src="js/script-nodes/StartAnimationScript.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/scenes/Level.js"></script>
-    <script src="js/prefabs/Player.js"></script>
-    <script src="js/prefabs/Boar.js"></script>
+    <link
+      rel="preload"
+      as="font"
+      href="./assets/fonts/ChaparralPro-Bold.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <style>
+      @font-face {
+        font-family: Chaparral;
+        src: url("assets/fonts/ChaparralPro-Bold.otf");
+      }
       body {
         background: black;
         margin: 0;
@@ -21,11 +25,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: Chaparral;
       }
       * {
         margin: 0 !important;
       }
     </style>
-  </head>
-  <body></body>
+    <script src="lib/phaser.js"></script>
+    <script src="js/scenes/Preloader.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/scenes/Level.js"></script>
+    <script src="js/prefabs/Player.js"></script>
+    <script src="js/prefabs/Boar.js"></script>
+  </body>
 </html>
