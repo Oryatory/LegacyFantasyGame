@@ -18,9 +18,9 @@ class Level extends Phaser.Scene {
     sky.setOrigin(0, 0);
     const front = this.add.image(0, 0, "front");
 
-    const backMisc = this.add.image(0, front.height - 790, "backgroundMisc");
+    const backMisc = this.add.image(0, front.height - 800, "backgroundMisc");
     backMisc.depth = 0;
-    backMisc.setScrollFactor(0.2);
+    backMisc.setScrollFactor(0.2, 0.1);
     backMisc.setOrigin(0, 0);
 
     front.depth = 1;
