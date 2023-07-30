@@ -2,9 +2,19 @@
   "section1": {
     "files": [
       {
-        "url": "assets/enviroment/Mountain-Dusk.png",
+        "url": "assets/enviroment/Background.png",
         "type": "image",
-        "key": "back"
+        "key": "sky"
+      },
+      {
+        "url": "assets/enviroment/BackgroundMisc.png",
+        "type": "image",
+        "key": "backgroundMisc"
+      },
+      {
+        "url": "assets/enviroment/ForegroundMisc.png",
+        "type": "image",
+        "key": "frontMisc"
       },
       {
         "url": "assets/enviroment/Level1.png",

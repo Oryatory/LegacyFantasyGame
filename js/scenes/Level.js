@@ -13,11 +13,23 @@ class Level extends Phaser.Scene {
     });
     const tileset = map.addTilesetImage("collision", "collisionTiles");
 
-    const back = this.add.image(0, 0, "back");
-    back.setOrigin(0, 0);
-
+    const sky = this.add.image(0, 0, "sky");
+    sky.setScrollFactor(0);
+    sky.setOrigin(0, 0);
     const front = this.add.image(0, 0, "front");
+
+    const backMisc = this.add.image(0, front.height - 840, "backgroundMisc");
+    backMisc.depth = 0;
+    backMisc.setScrollFactor(0.1);
+    backMisc.setOrigin(0, 0);
+
+    front.depth = 1;
     front.setOrigin(0, 0);
+
+    const frontMisc = this.add.image(0, front.height - 700, "frontMisc");
+    frontMisc.depth = 11;
+    frontMisc.setScrollFactor(1.2);
+    frontMisc.setOrigin(0, 0);
 
     const layer = map.createLayer("collisions", tileset, 0, 0);
     layer.setOrigin(0, 0);
@@ -53,13 +65,13 @@ class Level extends Phaser.Scene {
     );
 
     //create enemies
-    const boar = new Boar(this, 400, 150);
+    const boar = new Boar(this, 400, 640);
     this.add.existing(boar);
-    const boar2 = new Boar(this, 650, 150);
+    const boar2 = new Boar(this, 650, 480);
     this.add.existing(boar2);
     this.boars = [boar, boar2];
 
-    const player = new Player(this, 100, 150);
+    const player = new Player(this, 100, 640);
     this.add.existing(player);
 
     this.lightAttackHitbox = this.add.rectangle(0, 0, 30, 64, 0xffffff, 0);
@@ -94,44 +106,46 @@ class Level extends Phaser.Scene {
 
   createHud() {
     const hud = this.add.image(0, 0, "hud");
+    hud.depth = 11;
     hud.setScrollFactor(0);
     hud.setOrigin(0);
     this.add.existing(hud);
 
-    const controlsPallete = this.add.image(320, 70, "controlsPallete");
-    this.controlsPallete = controlsPallete;
-    this.controlsPallete.setScrollFactor(0);
-    this.controlsPallete.setVisible(false);
+    // const controlsPallete = this.add.image(320, 70, "controlsPallete");
+    // this.controlsPallete = controlsPallete;
+    // this.controlsPallete.setScrollFactor(0);
+    // this.controlsPallete.setVisible(false);
 
-    const controlsBtn = this.add.image(320, 25, "controlsBtn");
-    controlsBtn.setScrollFactor(0);
-    controlsBtn.setInteractive();
-    this.controlsBtn = controlsBtn;
+    // const controlsBtn = this.add.image(320, 25, "controlsBtn");
+    // controlsBtn.setScrollFactor(0);
+    // controlsBtn.setInteractive();
+    // this.controlsBtn = controlsBtn;
 
-    this.controlsBtn.on("pointerover", () => {
-      this.controlsPallete.setVisible(true);
+    // this.controlsBtn.on("pointerover", () => {
+    //   this.controlsPallete.setVisible(true);
 
-      this.tweens.add({
-        targets: [this.controlsPallete],
-        alpha: { from: 0, to: 1 },
-        y: { from: 50, to: 70 },
-        repeat: 0,
-        duration: 500,
-      });
-    });
-    this.controlsBtn.on("pointerout", () => {
-      this.tweens.add({
-        targets: [this.controlsPallete],
-        alpha: { from: 1, to: 0 },
-        y: { from: 70, to: 50 },
-        repeat: 0,
-        duration: 500,
-      });
-    });
+    //   this.tweens.add({
+    //     targets: [this.controlsPallete],
+    //     alpha: { from: 0, to: 1 },
+    //     y: { from: 50, to: 70 },
+    //     repeat: 0,
+    //     duration: 500,
+    //   });
+    // });
+    // this.controlsBtn.on("pointerout", () => {
+    //   this.tweens.add({
+    //     targets: [this.controlsPallete],
+    //     alpha: { from: 1, to: 0 },
+    //     y: { from: 70, to: 50 },
+    //     repeat: 0,
+    //     duration: 500,
+    //   });
+    // });
   }
 
   createHealthBars() {
     this.boars.forEach((boar) => {
+      boar.depth = 4;
       const healthBarOverlay = this.add.rectangle(
         boar.getBody()?.x * 2,
         boar.getBody()?.y + 0.5,
@@ -148,6 +162,9 @@ class Level extends Phaser.Scene {
         0xec3a0a,
         1
       );
+
+      healthBarOverlay.depth = 10;
+      healthBarPoints.depth = 10;
 
       const healthBar = {
         healthBarOverlay,
@@ -295,7 +312,7 @@ class Level extends Phaser.Scene {
 
       var vel = 180;
       if (jumpDown && body.onFloor()) {
-        body.velocity.y = -270;
+        body.velocity.y = -300;
       }
 
       if (leftDown) {
@@ -370,6 +387,7 @@ class Level extends Phaser.Scene {
         }
       );
       this.physics.add.existing(this.damageText);
+      this.damageText.depth = 10;
       this.damageText.body.velocity.y = -100;
       this.damageText.body.velocity.x = 40;
 

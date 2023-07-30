@@ -2,8 +2,8 @@
 
 window.addEventListener("load", () => {
   const game = new Phaser.Game({
-    width: 450,
-    height: 256,
+    width: 544,
+    height: 304,
     type: Phaser.AUTO,
     backgroundColor: "#FFFFFF",
     scale: {
@@ -77,7 +77,7 @@ class Boot extends Phaser.Scene {
   }
 
   create() {
-    this.time.delayedCall(2000, () => {
+    this.time.delayedCall(1000, () => {
       this.scene.stop("Preloader");
       this.scene.start("Level");
     });
