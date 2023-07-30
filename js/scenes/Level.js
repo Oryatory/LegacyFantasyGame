@@ -18,7 +18,7 @@ class Level extends Phaser.Scene {
     sky.setOrigin(0, 0);
     const front = this.add.image(0, 0, "front");
 
-    const backMisc = this.add.image(0, front.height - 800, "backgroundMisc");
+    const backMisc = this.add.image(0, front.height - 840, "backgroundMisc");
     backMisc.depth = 0;
     backMisc.setScrollFactor(0.2, 0.1);
     backMisc.setOrigin(0, 0);
@@ -26,9 +26,9 @@ class Level extends Phaser.Scene {
     front.depth = 1;
     front.setOrigin(0, 0);
 
-    const frontMisc = this.add.image(0, front.height - 700, "frontMisc");
+    const frontMisc = this.add.image(0, front.height - 740, "frontMisc");
     frontMisc.depth = 11;
-    frontMisc.setScrollFactor(1.2);
+    frontMisc.setScrollFactor(1.2, 1.1);
     frontMisc.setOrigin(0, 0);
 
     const layer = map.createLayer("collisions", tileset, 0, 0);
